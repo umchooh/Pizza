@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Order a Pizza!</h2>
+
+<form action="/Pizza/OrderConfirm" method="POST">
+    <div>
+        <label>Size:</label>
+        <select name="pizza_size">
+            <option value="SM">Small ($6.00)</option>
+            <option value="MD">Medium ($8.00)</option>
+            <option value="LG">Large ($11.00)</option>
+        </select>
+    </div>
+    <div>
+        <label>Crust:</label>
+        <select name="pizza_crust">
+            <option value="0">Regular ($6.00)</option>
+            <option value="1">Gluten-Free +($1.00)</option>
+        </select>
+    </div>
+    <div>
+        <label>Topping:</label>
+            <input type="checkbox" name="Toppings" value="cheese" />
+            <label>Cheese</label>
+            <input type="checkbox" name="Toppings" value="mushroom" />
+            <label>Mushroom</label>  
+    </div>
+
+    <div>
+        <input type="submit" value="Order Now!" />
+    </div>
+</form>
+
